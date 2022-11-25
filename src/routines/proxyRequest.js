@@ -39,23 +39,23 @@ const defaultChromeHeaders = {
  */
 const appendDefaultChromeHeaders = (request: Request) => {
   let nextHeaders = {
-    ...request.headers(),
     ...defaultChromeHeaders,
+    ...request.headers(),
     host: new URL(request.url()).hostname,
   };
 
   if (request.isNavigationRequest()) {
     nextHeaders = {
-      ...nextHeaders,
       'sec-fetch-mode': 'navigate',
       'sec-fetch-site': 'none',
       'sec-fetch-user': '?1',
+      ...nextHeaders,
     };
   } else {
     nextHeaders = {
-      ...nextHeaders,
       'sec-fetch-mode': 'no-cors',
       'sec-fetch-site': 'same-origin',
+      ...nextHeaders,
     };
   }
 
