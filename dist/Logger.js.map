@@ -1,0 +1,1 @@
+{"version":3,"file":"Logger.js","names":["Roarr","child","package"],"sources":["../src/Logger.js"],"sourcesContent":["// @flow\r\n\r\nimport Roarr from 'roarr';\r\n\r\nexport default Roarr.child({\r\n  package: 'puppeteer-proxy',\r\n});\r\n"],"mappings":";;;;;;AAEA;AAA0B;AAAA,eAEXA,cAAK,CAACC,KAAK,CAAC;EACzBC,OAAO,EAAE;AACX,CAAC,CAAC;AAAA"}
